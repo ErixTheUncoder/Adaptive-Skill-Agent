@@ -7,7 +7,6 @@ from dotenv import load_dotenv
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_mcp_adapters.client import MultiServerMCPClient
 from langchain_core.messages import HumanMessage, AIMessage, ToolMessage
-from langchain_core.language_models.fake_chat_models import FakeMessagesListChatModel
 
 load_dotenv()
 
@@ -238,10 +237,10 @@ async def main(mock=False):
 
     if mock:
         model_with_tools, tools, system_prompt = create_mock_agent(mcp_tools)
-        print("\n=== Local AI Agent (MOCK MODE - No API calls) ===")
+        print("\n=== Adaptive-Skill-Agent (MOCK MODE - No API calls) ===")
     else:
         model_with_tools, tools, system_prompt = create_agent(mcp_tools)
-        print("\n=== Local AI Agent (Gemini 2.0 Flash) ===")
+        print("\n=== Adaptive-Skill-Agent (Gemini 2.0 Flash) ===")
     
     print("Type 'quit' or 'exit' to stop.\n")
 

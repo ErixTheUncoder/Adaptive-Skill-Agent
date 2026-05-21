@@ -1,4 +1,4 @@
-# Project Context: Local AI Agent
+# Project Context: Adaptive-Skill-Agent
 
 ## Conventions
 - Skills are stored as directories under `skills/`

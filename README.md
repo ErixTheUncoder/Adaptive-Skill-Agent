@@ -1,19 +1,22 @@
-# Local AI Agent with MCP + SKILL.md
+# Adaptive-Skill-Agent
 
-A local AI agent that dynamically connects with MCP servers and SKILL.md files using LangChain and Google Gemini.
+A local AI agent that dynamically discovers and loads SKILL.md files and MCP servers at runtime. Built with LangChain and Google Gemini.
 
 ## Features
 
+- **Dynamic Skill Discovery**: Drop new `SKILL.md` files into `skills/` - agent auto-discovers them
 - **MCP Integration**: Connect to local MCP servers via stdio transport
-- **Dynamic SKILL.md Loading**: Drop new skills into `skills/` folder - agent discovers them automatically
 - **File Operations**: Read, write, list, and append files via MCP filesystem server
-- **Mock Mode**: Test agent loop without API calls (zero cost)
+- **Mock Mode**: Test the full agent loop without API calls (zero cost)
 - **Google Gemini**: Uses free tier Gemini models
+- **Extensible**: Add new skills and MCP servers without changing code
 
 ## Quick Start
 
 ```bash
-# 1. Install dependencies
+# 1. Clone and install
+git clone https://github.com/erichong/Adaptive-Skill-Agent.git
+cd Adaptive-Skill-Agent
 pip install -r requirements.txt
 
 # 2. Set up API key (optional - skip for mock mode)
@@ -30,7 +33,7 @@ python agent.py
 ## Project Structure
 
 ```
-my-ai-agent/
+Adaptive-Skill-Agent/
 ├── agent.py                    # Main agent script
 ├── requirements.txt            # Python dependencies
 ├── AGENTS.md                   # Shared conventions for agent
