@@ -1,0 +1,5 @@
+deepagents>=0.4.12
+langchain-mcp-adapters>=0.2.2
+langchain-google-genai>=2.0.0
+mcp>=1.0.0
+python-dotenv>=1.0.0
